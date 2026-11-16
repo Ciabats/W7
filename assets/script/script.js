@@ -10,7 +10,31 @@
 
 
 // === Classi ===
+class Libro {
+    letto = false;
+    constructor(_titolo, _autore, _anno) {
+        this.id = crypto.randomUUID();
+        this.titolo = this.titolo;
+        this.autore = this.autore;
+        this.anno = this.anno;
+    }
+    // metodo che modifica lo stato interno dell'oggetto
+    segnaComeLetto() {
+        this.letto = true;
+    }
 
+    // metodo formato un Libro base è cartaceo.
+    // Le sottoclassi lo SOVRASCRIVONO (override) con la loro versione.
+    formato(){
+        return "cartaceo";
+    }
+}
+
+class LibroDigitale extends Libro {
+    constructor(parameters) {
+        
+    }
+}
 
 
 // === Stato (array di libri) ===
